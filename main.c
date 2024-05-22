@@ -4,13 +4,13 @@
 #include <stdlib.h>
 
 // size of matrix (length & width)
-#define ROW 30
-#define COLUMN 30
+#define ROW 35
+#define COLUMN 35
 
 void graph(double m,  double b);
 
 int main(int argc, const char *argv[]){
-    graph(-0.1, 2);
+    graph(0.1, 2);
 }
 
 
@@ -30,7 +30,10 @@ void graph(double m,  double b){
             }else if(row_count == ROW/2 || column_count == COLUMN/2){
                     printf("* ");
                 //y=-x+1
-            } else {
+            } /*else if (column_count == row_count) {
+                printf("@ ");
+                }*/
+            else {
                 printf("  ");
             }
         }
